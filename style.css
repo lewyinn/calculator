@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'JetBrains Mono';
+}
+
+body {
+    height: 935px;
+    background: linear-gradient(to right, #0172AF, #74FEBD);
+}
+body.dark-mode {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    margin-top: 18px;
+    padding: 18px 48px;
+    border-radius: 48px;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    background-color: #ffffffd5;
+}
+body.dark-mode .navbar {
+    background-color: #000000d5;
+}
+.navitem {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+}
+.navicon {
+    width: 42px;
+    height: 42px;
+}
+body.dark-mode .navicon > path {
+    fill: white;
+}
+svg.brigthTheme {
+    display: none;
+}
+
+#theme-toggle svg {
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease;
+}
+
+body.dark-mode .brigthTheme path {
+    fill: white;
+}
+
+.navlink {
+    font-size: 21px;
+    font-weight: 700;
+    color: #000000;
+    position: relative;
+}
+body.dark-mode .navlink {
+    color: #FFFFFF;
+}
+.navlink:hover {
+    color: #00e6ad;
+}
+.navlink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00e6ad;
+    transition: width 0.3s ease-in-out;
+}
+.navlink:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: 580px;
+    }
+    .navbar {
+        margin-top: 12px;
+        padding: 12px 36px;
+        gap: 24px;
+    }
+    .navicon {
+        width: 32px;
+        height: 32px;
+    }
+    .navlink {
+        font-size: 16px;
+    }
+
+}
+
+
+/* Calculator */
+.kalkulator {
+    padding: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background: #ffffffc2;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode .calculator {
+    background: #000000c2;
+}
+.history {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000a2;
+    text-align: right;
+    margin-bottom: -20px;
+    overflow: hidden;
+    height: 62px;
+    text-overflow: ellipsis;
+}
+body.dark-mode .history {
+    color: #FFFFFFa2;
+}
+.display {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    white-space: nowrap;
+    border: none;
+}
+body.dark-mode .display {
+    color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-areas:
+        '.  .  .  .'
+        '.  .  .  .'
+        '.  .  .  a'
+        '.  .  .  a'
+        'b  b  .  .';
+    gap: 10px;
+}
+button {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 12px;
+    width: 92px;
+    border: none;
+    color: #168100;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+body.dark-mode button {
+    background-color: #000000;
+}
+button:hover {
+    background: #168100;
+    color: #FFFFFF;
+}
+body.dark-mode button:hover {
+    background: #168100;
+    color: #000000;
+}
+button.operator{
+    color: #00e6ad;
+}
+button.operator:hover{
+    background-color: #00e6ad;
+    color: white;
+}
+body.dark-mode button.operator:hover {
+    background-color: #00e6ad;
+    color: #000000;
+}
+.plusbtn {
+    grid-area: a;
+    height: 100%;
+}
+.zerobtn {
+    grid-area: b;
+    width: 100%;
+}
+button.ac{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .kalkulator {
+        padding: 70px;
+    }
+    .calculator { 
+        padding: 18px;
+    }
+    .history {
+        font-size: 24px;
+        height: 36px;
+        margin-bottom: -10px;
+        padding-top: 5px;
+    }
+    .display {
+        font-size: 36px;
+        margin-bottom: -5px;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 21px;
+        width: 54px;
+        padding: 12px 26px;
+    }
+}
+
+
+body.dark-mode svg.darkTheme {
+    display: none;
+}
+
+body.dark-mode svg.brigthTheme {
+    display: inline-block;
+}
