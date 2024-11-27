@@ -18,12 +18,12 @@ Kalkulator ini adalah aplikasi web interaktif dengan berbagai fitur, termasuk ka
 
 1. **Clone repository ini ke komputer Anda**:
     ```bash
-    git clone https://github.com/username/repository-name.git
+    git clone https://github.com/lewyinn/calculator.git
     ```
 
 2. **Masuk ke folder proyek**:
     ```bash
-    cd repository-name
+    cd calculator
     ```
 
 3. **Buka file `index.html` di browser Anda** untuk memulai kalkulator.
