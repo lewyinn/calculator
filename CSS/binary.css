@@ -1,0 +1,108 @@
+* {
+    overflow-x: hidden;
+}
+
+/* Binary */
+.biner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+.biner > h1 {
+    font-size: 36px;
+    font-weight: 700;
+    background-color: white;
+    padding: 8px 24px;
+    border-radius: 18px;
+}
+body.dark-mode .biner > h1 {
+    background: linear-gradient(90deg, #00f260, #0575e6);
+    color: white;
+}
+.binary {
+    background: #ffffffc2;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode .binary {
+    background: #000000c2;
+}
+
+.buttonsBinary > button {
+    padding: 18px 120px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsBinary {
+    display: grid;
+    grid-template-areas:
+        '.  .'
+        '.  .'
+        'c  c';
+    gap: 10px;
+}
+.buttonsBinary > .equals {
+    grid-area: c;
+    width: 100%;
+}
+
+
+.buttonsDecimal > button {
+    padding: 18px 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonsDecimal {
+    display: grid;
+    grid-template-areas:
+        'd  d  . '
+        '.  .  . '
+        '.  .  . '
+        '.  .  . '
+        '.  e  e ';
+    gap: 10px;
+}
+.buttonsDecimal > button.ac {
+    grid-area: d;
+    width: 100%;
+}
+.buttonsDecimal > .equals {
+    grid-area: e;
+    width: 100%;
+}
+
+
+.container {
+    padding: 42px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .binary > .display {
+        font-size: 38px;
+    }
+    .buttonsBinary > button {
+        padding: 12px 58px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonsDecimal > button {
+        padding: 12px 38px;
+    }
+    .biner > h1 {
+        font-size: 28px;
+    }
+    .container {
+        flex-direction: column;
+        gap: 48px;
+    }
+}

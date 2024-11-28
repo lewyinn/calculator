@@ -11,7 +11,6 @@
 }
 
 body {
-    height: 935px;
     background: linear-gradient(to right, #0172AF, #74FEBD);
 }
 body.dark-mode {
@@ -72,6 +71,12 @@ body.dark-mode .brigthTheme path {
 body.dark-mode .navlink {
     color: #FFFFFF;
 }
+.navlink.active {
+    color: #00e6ad;
+}
+body.dark-mode .navlink.active {
+    color: #00e6ad;
+}
 .navlink:hover {
     color: #00e6ad;
 }
@@ -90,9 +95,6 @@ body.dark-mode .navlink {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        height: 580px;
-    }
     .navbar {
         margin-top: 12px;
         padding: 12px 36px;
@@ -105,9 +107,11 @@ body.dark-mode .navlink {
     .navlink {
         font-size: 16px;
     }
-
+    #theme-toggle svg {
+        width: 28px;
+        height: 28px;
+    }
 }
-
 
 /* Calculator */
 .kalkulator {
